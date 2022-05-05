@@ -124,6 +124,11 @@ class Adafruit_SGP30:
         # name, command, signals, delay
         return self._run_profile(["iaq_measure", [0x20, 0x08], 2, 0.05])
 
+    def iaq_measure_raw(self):
+        """Measure the H2 and Ethanol raw signals"""
+        # name, command, signals, delay
+        return self._run_profile(["iaq_measure_raw", [0x20, 0x50], 2, 0.05])
+
     def get_iaq_baseline(self):
         """Retreive the IAQ algorithm baseline for CO2eq and TVOC"""
         # name, command, signals, delay
