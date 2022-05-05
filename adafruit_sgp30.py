@@ -104,6 +104,15 @@ class Adafruit_SGP30:
         """Carbon Dioxide Equivalent baseline value"""
         return self.get_iaq_baseline()[0]
 
+    @property
+    def H2(self):
+        """H2 raw signal"""
+        return self.iaq_measure_raw()[0]
+    
+    @property
+    def Ethanol(self):
+        """Ethanol raw signal"""
+        return self.iaq_measure_raw()[1]
 
     def iaq_init(self):
         """Initialize the IAQ algorithm"""
